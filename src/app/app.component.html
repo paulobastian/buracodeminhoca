@@ -1,0 +1,43 @@
+<div class="toolbar" role="banner">
+  <img
+    width="3%"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  
+  <span class="centralizado">{{title}}</span>
+    <div class="spacer"></div>    
+</div>
+
+<div class="content" role="main">
+
+  <h2>Desafio Buraco de Minhoca!</h2>
+  <p>Uma minhoca está num buraco de 20Cm de profundidade. Ela sobe 5cm por vez e cai 3cm, sendo que cada vez que ela cai, ela pausa 1 segundo.</p>
+  <br>
+  <div class="card-container">
+    <span class="textoInput">Tamanho Buraco:</span>
+    <input type="text" name="inpPro" id="inpPro" value="20">
+
+    <span class="textoInput">Quanto sobe:</span>
+    <input type="text" name="inpSob" id="inpSob" value="5">
+
+    <span class="textoInput">Quanto cai:</span>
+    <input type="text" name="inpCai" id="inpCai" value="3">
+
+    <!-- Inclui somente o framework do bootstrap neste item para demonstrar a sua usabilidade! -->
+    <button class="btn btn-success" (click)="recalcula()">Executa!</button> 
+  </div>
+  <br>
+    
+  <div id="divCor1" class="cor1">
+    <span> Quase lá, soh mais um pouco! </span>
+  </div>
+  <div id="divCor2" class="cor2">
+    <span> Parabéns chegou ao topo! </span>
+    <br>
+    <span id="cDivInt"> {{nInter}}</span>
+  </div>
+  
+</div>
+
+<router-outlet></router-outlet>
